@@ -1,0 +1,13 @@
+.facebookLoginButton {
+    color: white;
+    background-color: #3b5998;
+    border-radius: 5px;
+    padding: 8px 10px 7px;
+    border: none;
+    width: 200px;
+    max-width: 95%;
+    flex: 1;
+    margin: 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
