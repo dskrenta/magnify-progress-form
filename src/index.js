@@ -27,7 +27,7 @@ const client = new ApolloClient({
 
 const muiTheme = getMuiTheme({
   palette: {
-    primary1Color: '#0ae'
+    primary1Color: '#243e5d'
   }
 });
 

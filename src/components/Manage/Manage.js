@@ -1,7 +1,19 @@
 import React from 'react';
+import AppBar from 'material-ui/AppBar';
+
+import './Manage.css';
 
 const Manage = () => (
-  <h1>Manage</h1>
+  <div>
+    <AppBar 
+      className='manageHeader' 
+      title='Magnify Progress' 
+      showMenuIconButton={false} 
+    />
+    <div className='manageContain'>
+      Manage
+    </div>
+  </div>
 );
 
 export default Manage;

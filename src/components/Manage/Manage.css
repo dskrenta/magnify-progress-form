@@ -1,0 +1,8 @@
+.manageContain {
+  padding-top: 64px;
+  box-sizing: border-box;
+}
+.manageHeader {
+  position: fixed !important;
+  top: 0;
+}
