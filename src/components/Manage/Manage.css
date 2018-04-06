@@ -1,8 +1,64 @@
-.manageContain {
-  padding-top: 64px;
+@media screen and (min-width: 1024px) {
+  .actionsContain {
+    width: 95%;
+  }
+  .actionItem {
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  .actionsContain {
+    width: 90%;
+  }
+  .actionItem {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .actionsContain {
+    width: 95%;
+  }
+  .actionItem {
+    width: 100%;
+  }
+}
+
+.actionsContain {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1024px;
+  margin: 100px auto 50px; 
+}
+.actionItem {
   box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+}
+.actionCard {
+  background-color:  white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px, rgba(0, 0, 0, 0.1) 0px 1px 2px;
+  border-radius: 3px;
+  flex: 1;
+  overflow: hidden;
+}
+.actionItemImage {
+  width: 100%;
+  max-height: 170px;
+  object-fit: cover;
+  margin-bottom: -5px;
+}
+.actionItemTitle {
+  font-size: 18px;
+  margin: 10px 15px;
 }
 .manageHeader {
   position: fixed !important;
+  background-color: white !important;
   top: 0;
+}
+.headerLogo {
+  height: 52px;
+  margin: 4px 0 8px;
 }
