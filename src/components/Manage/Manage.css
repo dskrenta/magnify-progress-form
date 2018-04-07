@@ -43,6 +43,11 @@
   flex: 1;
   overflow: hidden;
 }
+.innerActionCard {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}
 .actionItemImage {
   width: 100%;
   max-height: 170px;
@@ -50,15 +55,23 @@
   margin-bottom: -5px;
 }
 .actionItemTitle {
-  font-size: 18px;
-  margin: 10px 15px;
+  font-size: 16px;
+  margin: 12px 15px 10px;
+  color: #333;
 }
-.manageHeader {
-  position: fixed !important;
-  background-color: white !important;
-  top: 0;
+.actionItemTagsContain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 15px 10px;
 }
-.headerLogo {
-  height: 52px;
-  margin: 4px 0 8px;
+.actionItemTag {
+  border: 2px solid #243e5d;
+  font-weight: bold;
+  font-size: 14px;
+  color: #243e5d;
+  padding: 2px 8px;
+  margin: 0 5px 5px 0;
+  border-radius: 5px;
 }

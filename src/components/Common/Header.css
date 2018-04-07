@@ -1,0 +1,9 @@
+.header {
+  position: fixed !important;
+  background-color: white !important;
+  top: 0;
+}
+.headerLogo {
+  height: 52px;
+  margin: 4px 0 8px;
+}

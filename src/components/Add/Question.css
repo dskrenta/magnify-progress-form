@@ -1,0 +1,11 @@
+.questionContain {
+  padding-bottom: 10px;
+}
+.questionLabel {
+  margin: 15px 0 0;
+}
+.checkboxContain {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5px 0 10px;
+}
