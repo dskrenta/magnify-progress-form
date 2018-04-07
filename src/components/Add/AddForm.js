@@ -1,8 +1,9 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { TextField, Checkbox } from 'redux-form-material-ui';
+import { TextField } from 'redux-form-material-ui';
 
 import ImageUpload from './ImageUpload';
+import CheckboxGroup from './CheckboxGroup';
 import Question from './Question';
 import './Question.css';
 
@@ -11,22 +12,6 @@ const fieldProps = {
     width: '100%'
   },
   multiLine: true
-}
-
-const checkboxProps = {
-  style: {
-    width: '33%',
-    minWidth: '200px',
-    paddingRight: 20,
-    paddingTop: 10,
-    boxSizing: 'border-box'
-  },
-  labelStyle: {
-    width: 'auto',
-  },
-  iconStyle: {
-    marginRight: 10
-  }
 }
 
 const sampleTopics = ['Healthcare','Education','Womens Issues','Environment','Tax Budget','Climate Change','Foreign Relations','Gun Control'];
@@ -51,17 +36,11 @@ class AddForm extends React.Component {
           />
         </Question>
         <Question label='Topics (Check all that apply)' required>
-          <div className='checkboxContain'>
-            {sampleTopics.map((topic, index) => (
-              <Field 
-                key={index}
-                name={topic}
-                component={Checkbox}
-                label={topic}
-                props={checkboxProps}
-              />
-            ))}
-          </div>
+          <Field 
+            name='topics'
+            component={CheckboxGroup}
+            items={sampleTopics}
+          />
         </Question>
         <Question label='Description' required>
           <Field
