@@ -4,3 +4,14 @@
   max-width: 640px;
   margin: 100px auto 50px; 
 }
+.submitButton {
+  padding: 0 50px;
+  border: 3px solid #243e5d;
+  color: #243e5d;
+  height: 40px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: white;
+  cursor: pointer;
+}

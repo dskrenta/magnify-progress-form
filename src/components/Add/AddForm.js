@@ -8,12 +8,12 @@ import YesNo from './YesNo';
 import ImageUpload from './ImageUpload';
 import CheckboxGroup from './CheckboxGroup';
 import Question from './Question';
-import './Question.css';
+import './Add.css';
+
+const fieldStyle = {width: '100%'}
 
 const fieldProps = {
-  style: {
-    width: '100%'
-  },
+  style: fieldStyle,
   multiLine: true
 }
 
@@ -89,7 +89,7 @@ class AddForm extends React.Component {
               component={DatePicker}
               format={(value, name) => (value === '' ? null : value)}
               placeholder='End Date'
-              textFieldStyle={fieldProps}
+              textFieldStyle={fieldStyle}
             />
           </YesNo>
         </Question>
@@ -100,6 +100,7 @@ class AddForm extends React.Component {
                 name='bills'
                 component={TextField}
                 placeholder='Bills'
+                props={fieldProps}
               />
             </CheckInput>
             <CheckInput label='Reps'>
@@ -107,6 +108,7 @@ class AddForm extends React.Component {
                 name='reps'
                 component={TextField}
                 placeholder='Reps'
+                props={fieldProps}
               />
             </CheckInput>
             <CheckInput label='Committees'>
@@ -114,6 +116,7 @@ class AddForm extends React.Component {
                 name='committees'
                 component={TextField}
                 placeholder='Committees'
+                props={fieldProps}
               />
             </CheckInput>
           </div>
@@ -121,13 +124,14 @@ class AddForm extends React.Component {
         <Question label='Does your action depend on location information?'>
           <div style={{paddingBottom: 20}}>
             <YesNo>
-              <div style={{paddingLeft: 20, paddingBottom: 10, marginTop: 15, border: '1px solid #ddd'}}>
+              <div style={{boxSizing: 'border-box', padding: '0 20px 10px', marginTop: 15, border: '1px solid #ddd'}}>
                 <Question label='Do you want to only show the action to a specific set of representatives?'>
                   <YesNo>
                     <Field 
                       name='locationReps'
                       component={TextField}
                       placeholder='Related Reps'
+                      props={fieldProps}
                     />
                   </YesNo>
                 </Question>
@@ -137,6 +141,7 @@ class AddForm extends React.Component {
                       name='locationStates'
                       component={TextField}
                       placeholder='Related States'
+                      props={fieldProps}
                     />
                   </YesNo>
                 </Question>
@@ -146,6 +151,7 @@ class AddForm extends React.Component {
                       name='locationDistricts'
                       component={TextField}
                       placeholder='Related Districts'
+                      props={fieldProps}
                     />
                   </YesNo>
                 </Question>
@@ -155,6 +161,7 @@ class AddForm extends React.Component {
                       name='locationAddress'
                       component={TextField}
                       placeholder='Event Address'
+                      props={fieldProps}
                     />
                   </YesNo>
                 </Question>
@@ -162,7 +169,7 @@ class AddForm extends React.Component {
             </YesNo>
           </div>
         </Question>
-        <button type='submit'>Submit</button>
+        <button type='submit' className='submitButton'>Submit</button>
       </form>
     )
   }
