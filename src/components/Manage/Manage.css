@@ -75,3 +75,26 @@
   margin: 0 5px 5px 0;
   border-radius: 5px;
 }
+.addActionButton {
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  margin: auto;
+  padding: 15px 15px 25px;
+  border: 4px solid #243e5d;
+  color: #243e5d;
+  font-weight: bold;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.addActionButton:hover {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.15) 0px 1px 4px;
+}
+.addActionButton span {
+  font-size: 1.5em;
+  line-height: 1em;
+}

@@ -42,7 +42,7 @@ const Manage = () => (
                 {'tags' in action 
                   && (<div className='actionItemTagsContain'>
                     {action.tags.map((tag, idx) => (
-                      <div className='actionItemTag'>{tag}</div>
+                      <div key={idx} className='actionItemTag'>{tag}</div>
                     ))}
                   </div>)
                 }
@@ -51,6 +51,13 @@ const Manage = () => (
           </div>
         </div>
       ))}
+      <div className='actionItem'>
+        <Link to='/add' style={{textDecoration: 'none', margin: 'auto'}}>
+          <div className='addActionButton'>
+            <h3><span>+</span><br/>Create Action</h3>
+          </div>
+        </Link>
+      </div>
     </div>
   </div>
 );
