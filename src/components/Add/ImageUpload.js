@@ -14,7 +14,7 @@ class ImageUpload extends React.Component{
 
   render() {
     return (
-      <div style={{paddingTop: 15}}>
+      <div style={{paddingTop: 15, paddingBottom: 5}}>
         <input
           type='file'
           accept='.jpg, .png'
